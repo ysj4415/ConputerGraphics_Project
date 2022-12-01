@@ -7,6 +7,7 @@
 #include "ShaderProgram.h"
 #include "CallBack.h"
 #include "WindowState.h"
+#include "GameWorld.h"
 
 using namespace std;
 
@@ -16,8 +17,6 @@ int WinSize_h = 800;
 
 //---윈도우 아이디
 int windowID;
-
-Mesh cube;
 
 int main(int argc, char** argv)		//---윈도우 출력, 콜백함수 설정
 {
@@ -41,6 +40,7 @@ int main(int argc, char** argv)		//---윈도우 출력, 콜백함수 설정
 	InitShader();
 
 	cube.InitBuffer();
+	cube.SetColor(1.0, 0.0, 0.0);
 	glEnable(GL_DEPTH_TEST);
 
 

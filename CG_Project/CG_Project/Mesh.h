@@ -9,7 +9,7 @@
 #include <gl/glm/glm.hpp>
 #include <gl/glm/ext.hpp>
 #include <gl/glm/gtc/matrix_transform.hpp>
-
+#include "Transform.h"
 
 
 class Mesh
@@ -19,14 +19,19 @@ private:
 	GLuint vbo;
 	GLuint ebo;
 
-	glm::vec3 translate;
-	glm::vec3 rotate;
-	glm::vec3 scale;
-public:
+	int vertexNum;
+	int faceNum;
 
+	glm::vec3 color;
+
+public:
+	Transform transform;
+
+public:
 	Mesh();
 	~Mesh();
 	void InitBuffer();
+	void SetColor(GLfloat r, GLfloat g, GLfloat b);
 
 	void Draw(glm::mat4 view, glm::mat4 projection);
 };

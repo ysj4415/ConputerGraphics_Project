@@ -2,14 +2,22 @@
 #include "objReader.h"
 #include "ShaderProgram.h"
 
+Mesh::Mesh()
+{
+	vao = 0; vbo = 0; ebo = 0;
+	translate = glm::vec3(0.0, 0.0, 0.0);
+	rotate = glm::vec3(0.0, 0.0, 0.0);
+	scale = glm::vec3(2.0, 1.0, 1.0);
+}
+Mesh::~Mesh() {}
 
 void Mesh::Draw(glm::mat4 view, glm::mat4 projection)
 {
+	glUseProgram(s_program);
+
 	unsigned int viewLoc_shape = glGetUniformLocation(s_program, "view"); //--- ºäÀ× º¯È¯ ¼³Á¤
 	unsigned int projLoc_shape = glGetUniformLocation(s_program, "projection");
 
-
-	glUseProgram(s_program);
 	glUniformMatrix4fv(viewLoc_shape, 1, GL_FALSE, &view[0][0]);
 	glUniformMatrix4fv(projLoc_shape, 1, GL_FALSE, &projection[0][0]);
 

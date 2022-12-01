@@ -18,14 +18,11 @@
     <ClInclude Include="objReader.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
-    <ClInclude Include="filetobuf.h">
-      <Filter>헤더 파일</Filter>
-    </ClInclude>
     <ClInclude Include="Mesh.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
-    <ClInclude Include="ShaderProgram.cpp">
-      <Filter>소스 파일</Filter>
+    <ClInclude Include="ShaderProgram.h">
+      <Filter>헤더 파일</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -38,13 +35,7 @@
     <ClCompile Include="Mesh.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="ShaderProgram.h">
-      <Filter>헤더 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="filetobuf.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="s_program.cpp">
+    <ClCompile Include="ShaderProgram.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>

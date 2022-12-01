@@ -1,6 +1,7 @@
 #pragma once
 
 #define _CRT_SECURE_NO_WARNINGS
+#pragma once
 #include <iostream>
 #include <gl/glew.h>
 #include <gl/freeglut.h>

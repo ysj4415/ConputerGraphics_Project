@@ -7,7 +7,7 @@ Mesh::Mesh()
 	vao = 0; vbo = 0; ebo = 0;
 	translate = glm::vec3(0.0, 0.0, 0.0);
 	rotate = glm::vec3(0.0, 0.0, 0.0);
-	scale = glm::vec3(2.0, 1.0, 1.0);
+	scale = glm::vec3(1.0, 1.0, 1.0);
 }
 Mesh::~Mesh() {}
 

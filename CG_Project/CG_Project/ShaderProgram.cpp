@@ -1,8 +1,6 @@
 #define _CRT_SECURE_NO_WARNINGS
 #include "ShaderProgram.h"
 
-char* filetobuf(const char* file);
-
 GLchar* vertexsource, * fragmentsource;		//---소스코드 저장 변수
 GLuint vertexshader, fragmentshader;		//---세이더 객체
 

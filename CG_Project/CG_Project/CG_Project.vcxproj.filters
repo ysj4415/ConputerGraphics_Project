@@ -13,6 +13,9 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="소스 파일\CallBack">
+      <UniqueIdentifier>{e9998e6c-99f7-463e-9e50-817cdb358f3f}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="objReader.h">
@@ -22,6 +25,12 @@
       <Filter>헤더 파일</Filter>
     </ClInclude>
     <ClInclude Include="ShaderProgram.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="CallBack.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="WindowState.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
   </ItemGroup>
@@ -37,6 +46,18 @@
     </ClCompile>
     <ClCompile Include="ShaderProgram.cpp">
       <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="drawscene.cpp">
+      <Filter>소스 파일\CallBack</Filter>
+    </ClCompile>
+    <ClCompile Include="reshape.cpp">
+      <Filter>소스 파일\CallBack</Filter>
+    </ClCompile>
+    <ClCompile Include="keyboard.cpp">
+      <Filter>소스 파일\CallBack</Filter>
+    </ClCompile>
+    <ClCompile Include="timerfunction.cpp">
+      <Filter>소스 파일\CallBack</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

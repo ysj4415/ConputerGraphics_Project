@@ -35,7 +35,7 @@ void Mesh::Draw(glm::mat4 view, glm::mat4 projection)
 
 void Mesh::InitBuffer()
 {
-	obj objfile("cube.obj");
+	obj objfile("orb.obj");
 	objfile.ReadObj();
 
 	vertexNum = objfile.vertexNum;

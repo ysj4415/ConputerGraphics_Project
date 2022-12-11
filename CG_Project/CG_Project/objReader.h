@@ -13,11 +13,16 @@ struct obj
 {
 	FILE* objFile;
 	glm::vec3* vertex = NULL;
+	glm::vec3* vertex_texture = NULL;
+	glm::vec3* vertex_nomal = NULL;
+
 	int* face_v = NULL;
 	int* face_vt = NULL;
 	int* face_vn = NULL;
 
 	int vertexNum = 0;
+	int vertex_nomalNum = 0;
+	int vertex_textureNum = 0;
 	int faceNum = 0;
 
 	void ReadObj();

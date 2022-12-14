@@ -13,75 +13,87 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
-    <Filter Include="소스 파일\CallBack">
-      <UniqueIdentifier>{e9998e6c-99f7-463e-9e50-817cdb358f3f}</UniqueIdentifier>
+    <Filter Include="헤더 파일\frame_work">
+      <UniqueIdentifier>{837037a2-fa58-47da-abf0-6c79bc4591db}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="헤더 파일\object">
+      <UniqueIdentifier>{cfb3936b-0850-4a1c-b3bc-5f78da759d96}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="헤더 파일\world">
+      <UniqueIdentifier>{552c3eb6-8fbf-471f-b0b3-6e71effb3a8e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\frame_work">
+      <UniqueIdentifier>{03a4ab4b-024c-4ba5-a9a1-d31504c75917}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\world">
+      <UniqueIdentifier>{4505aad1-4fa6-4e5f-a187-b8ae9eab6810}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\object">
+      <UniqueIdentifier>{1d501e93-824d-4fd6-9f73-e75b2cb68d2f}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="objReader.h">
-      <Filter>헤더 파일</Filter>
+    <ClInclude Include="Transform.h">
+      <Filter>헤더 파일\frame_work</Filter>
+    </ClInclude>
+    <ClInclude Include="Object.h">
+      <Filter>헤더 파일\object</Filter>
     </ClInclude>
     <ClInclude Include="Mesh.h">
-      <Filter>헤더 파일</Filter>
+      <Filter>헤더 파일\object</Filter>
+    </ClInclude>
+    <ClInclude Include="GameWorld.h">
+      <Filter>헤더 파일\world</Filter>
+    </ClInclude>
+    <ClInclude Include="Camera.h">
+      <Filter>헤더 파일\world</Filter>
+    </ClInclude>
+    <ClInclude Include="Projection.h">
+      <Filter>헤더 파일\world</Filter>
     </ClInclude>
     <ClInclude Include="ShaderProgram.h">
-      <Filter>헤더 파일</Filter>
+      <Filter>헤더 파일\frame_work</Filter>
+    </ClInclude>
+    <ClInclude Include="WindowState.h">
+      <Filter>헤더 파일\world</Filter>
     </ClInclude>
     <ClInclude Include="CallBack.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
-    <ClInclude Include="WindowState.h">
-      <Filter>헤더 파일</Filter>
+    <ClInclude Include="objReader.h">
+      <Filter>헤더 파일\frame_work</Filter>
     </ClInclude>
-    <ClInclude Include="Camera.h">
-      <Filter>헤더 파일</Filter>
-    </ClInclude>
-    <ClInclude Include="GameWorld.h">
-      <Filter>헤더 파일</Filter>
-    </ClInclude>
-    <ClInclude Include="Projection.h">
-      <Filter>헤더 파일</Filter>
-    </ClInclude>
-    <ClInclude Include="Transform.h">
-      <Filter>헤더 파일</Filter>
+    <ClInclude Include="Object.cpp">
+      <Filter>소스 파일\object</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="objread.cpp">
+    <ClCompile Include="CallBack.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="Mesh.cpp">
-      <Filter>소스 파일</Filter>
+    <ClCompile Include="objread.cpp">
+      <Filter>소스 파일\frame_work</Filter>
     </ClCompile>
     <ClCompile Include="ShaderProgram.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="drawscene.cpp">
-      <Filter>소스 파일\CallBack</Filter>
-    </ClCompile>
-    <ClCompile Include="reshape.cpp">
-      <Filter>소스 파일\CallBack</Filter>
-    </ClCompile>
-    <ClCompile Include="keyboard.cpp">
-      <Filter>소스 파일\CallBack</Filter>
-    </ClCompile>
-    <ClCompile Include="timerfunction.cpp">
-      <Filter>소스 파일\CallBack</Filter>
-    </ClCompile>
-    <ClCompile Include="Camera.cpp">
-      <Filter>소스 파일</Filter>
+      <Filter>소스 파일\frame_work</Filter>
     </ClCompile>
     <ClCompile Include="Transform.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="GameWorld.cpp">
-      <Filter>소스 파일</Filter>
+      <Filter>소스 파일\frame_work</Filter>
     </ClCompile>
     <ClCompile Include="Projection.cpp">
-      <Filter>소스 파일</Filter>
+      <Filter>소스 파일\world</Filter>
+    </ClCompile>
+    <ClCompile Include="Camera.cpp">
+      <Filter>소스 파일\world</Filter>
+    </ClCompile>
+    <ClCompile Include="GameWorld.cpp">
+      <Filter>소스 파일\world</Filter>
+    </ClCompile>
+    <ClCompile Include="Mesh.cpp">
+      <Filter>소스 파일\object</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

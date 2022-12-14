@@ -15,9 +15,9 @@
 class Mesh
 {
 private:
-	GLuint vao;
-	GLuint vbo;
-	GLuint ebo;
+	//GLuint vao;
+	//GLuint vbo;
+	//GLuint ebo;
 
 	int vertexNum;
 	int faceNum;
@@ -26,12 +26,16 @@ private:
 
 public:
 	Transform transform;
-
+	GLuint vao;
+	GLuint vbo;
+	GLuint ebo;
 public:
 	Mesh();
 	~Mesh();
-	void InitBuffer();
+	void InitBuffer(const char* objname);
 	void SetColor(GLfloat r, GLfloat g, GLfloat b);
+	glm::vec3 GetColor();
+	int GetfaceNum();
 
 	void Draw(glm::mat4 view, glm::mat4 projection);
 };

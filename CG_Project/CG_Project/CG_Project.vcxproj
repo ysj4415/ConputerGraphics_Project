@@ -129,6 +129,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="Object.h" />
     <ClInclude Include="CallBack.h" />
     <ClInclude Include="Camera.h" />
     <ClInclude Include="GameWorld.h" />
@@ -142,17 +143,16 @@
     <ClInclude Include="ShaderProgram.h" />
     <ClInclude Include="Transform.h" />
     <ClInclude Include="WindowState.h" />
+    <ClInclude Include="Object.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="CallBack.cpp" />
     <ClCompile Include="Camera.cpp" />
-    <ClCompile Include="drawscene.cpp" />
     <ClCompile Include="GameWorld.cpp" />
-    <ClCompile Include="keyboard.cpp" />
     <ClCompile Include="main.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="Projection.cpp" />
-    <ClCompile Include="reshape.cpp" />
     <ClCompile Include="ShaderProgram.cpp" />
     <ClCompile Include="Mesh.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ExcludedFromBuild>
@@ -160,7 +160,6 @@
     <ClCompile Include="objread.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ExcludedFromBuild>
     </ClCompile>
-    <ClCompile Include="timerfunction.cpp" />
     <ClCompile Include="Transform.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

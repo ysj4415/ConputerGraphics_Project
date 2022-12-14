@@ -33,9 +33,9 @@ void Mesh::Draw(glm::mat4 view, glm::mat4 projection)
 }
 
 
-void Mesh::InitBuffer()
+void Mesh::InitBuffer(const char* objname)
 {
-	obj objfile("orb.obj");
+	obj objfile(objname);
 	objfile.ReadObj();
 
 	vertexNum = objfile.vertexNum;
@@ -59,4 +59,12 @@ void Mesh::InitBuffer()
 void Mesh::SetColor(GLfloat r, GLfloat g, GLfloat b)
 {
 	color = glm::vec3(r, g, b);
+}
+glm::vec3 Mesh::GetColor()
+{
+	return color;
+}
+int Mesh::GetfaceNum()
+{
+	return faceNum;
 }

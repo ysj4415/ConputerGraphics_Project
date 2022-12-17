@@ -1,4 +1,6 @@
 #define _CRT_SECURE_NO_WARNINGS
+
+#pragma warning(disable: 26451)
 #include "ShaderProgram.h"
 
 GLchar* vertexsource, * fragmentsource;		//---소스코드 저장 변수

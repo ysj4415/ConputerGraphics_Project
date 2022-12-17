@@ -1,5 +1,11 @@
 #define _CRT_SECURE_NO_WARNINGS
+
+#pragma warning(disable: 6011)
+#pragma warning(disable: 6031)
+#pragma warning(disable: 6385)
+
 #include "objReader.h"
+
 
 void obj::ReadObj()
 {

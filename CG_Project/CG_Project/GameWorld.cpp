@@ -89,7 +89,6 @@ void GameWorld::DataRead(const char* datafile)
 	FILE* dataFile;
 	dataFile = fopen(datafile, "rb");
 
-
 	//--- 1. 전체 버텍스 개수 및 삼각형 개수 세기
 	char count[100];
 

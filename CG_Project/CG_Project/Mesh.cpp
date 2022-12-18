@@ -137,7 +137,7 @@ void Actor::Draw(glm::mat4 view, glm::mat4 projection)
 	glBindVertexArray(mesh.vao);
 
 	glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(TR));
-	glUniform4f(vColorLocation, mesh.GetColor().x, mesh.GetColor().y, mesh.GetColor().z, 1.0f);
+	glUniform3f(vColorLocation, mesh.GetColor().x, mesh.GetColor().y, mesh.GetColor().z);
 	glUniformMatrix4fv(viewLoc, 1, GL_FALSE, &view[0][0]);
 	glUniformMatrix4fv(projLoc, 1, GL_FALSE, &projection[0][0]);
 

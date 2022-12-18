@@ -32,14 +32,14 @@ void obj::ReadObj()
 
 	int faceIndex = 0;
 	if (vertex != NULL) free(vertex);
-	if (vertex_nomal != NULL) free(vertex_nomal);
+	if (vertex_normal != NULL) free(vertex_normal);
 	if (vertex_texture != NULL) free(vertex_texture);
 	if (face_v != NULL) free(face_v);
 	if (face_vt != NULL) free(face_vt);
 	if (face_vn != NULL) free(face_vn);
 
 	vertex = (glm::vec3*)malloc(sizeof(glm::vec3) * vertexNum);
-	vertex_nomal = (glm::vec3*)malloc(sizeof(glm::vec3) * vertex_nomalNum);
+	vertex_normal = (glm::vec3*)malloc(sizeof(glm::vec3) * vertex_nomalNum);
 	vertex_texture = (glm::vec3*)malloc(sizeof(glm::vec3) * vertex_textureNum);
 	face_v = (int*)malloc(sizeof(int) * faceNum * 3);
 	face_vt = (int*)malloc(sizeof(int) * faceNum * 3);
@@ -58,8 +58,8 @@ void obj::ReadObj()
 		}
 		else if (count[0] == 'vn' && count[1] == '\0') {
 			fscanf(objFile, "%f %f %f",
-				&vertex_nomal[vertNIndex].x, &vertex_nomal[vertNIndex].y,
-				&vertex_nomal[vertNIndex].z);
+				&vertex_normal[vertNIndex].x, &vertex_normal[vertNIndex].y,
+				&vertex_normal[vertNIndex].z);
 			vertNIndex++;
 		}
 		else if (count[0] == 'vt' && count[1] == '\0') {

@@ -14,7 +14,7 @@ struct obj
 	FILE* objFile;
 	glm::vec3* vertex = NULL;
 	glm::vec3* vertex_texture = NULL;
-	glm::vec3* vertex_nomal = NULL;
+	glm::vec3* vertex_normal = NULL;
 
 	int* face_v = NULL;
 	int* face_vt = NULL;

@@ -38,7 +38,7 @@ void Ball::Draw(glm::mat4 view, glm::mat4 projection)
 	glBindVertexArray(main_ball.vao);
 
 	glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(TR));
-	glUniform4f(vColorLocation, main_ball.GetColor().x, main_ball.GetColor().y, main_ball.GetColor().z, 1.0f);
+	glUniform3f(vColorLocation, main_ball.GetColor().x, main_ball.GetColor().y, main_ball.GetColor().z);
 	glUniformMatrix4fv(viewLoc, 1, GL_FALSE, &view[0][0]);
 	glUniformMatrix4fv(projLoc, 1, GL_FALSE, &projection[0][0]);
 
@@ -52,7 +52,7 @@ void Ball::Draw(glm::mat4 view, glm::mat4 projection)
 	glBindVertexArray(sub_ball.vao);
 
 	glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(TR));
-	glUniform4f(vColorLocation, sub_ball.GetColor().x, sub_ball.GetColor().y, sub_ball.GetColor().z, 1.0f);
+	glUniform3f(vColorLocation, sub_ball.GetColor().x, sub_ball.GetColor().y, sub_ball.GetColor().z);
 
 	glDrawElements(GL_TRIANGLES, sub_ball.GetfaceNum() * 3, GL_UNSIGNED_INT, (GLvoid*)(sizeof(GLuint) * 0));
 
@@ -64,7 +64,7 @@ void Ball::Draw(glm::mat4 view, glm::mat4 projection)
 	glBindVertexArray(main_ball_guideline.vao);
 
 	glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(MeshTR));
-	glUniform4f(vColorLocation, main_ball.GetColor().x, main_ball.GetColor().y, main_ball.GetColor().z, 1.0f);
+	glUniform3f(vColorLocation, main_ball.GetColor().x, main_ball.GetColor().y, main_ball.GetColor().z);
 	glPointSize(1.5);
 	glDrawArrays(GL_POINTS, 0, main_ball_guideline.GetVertexNum());
 
@@ -74,7 +74,7 @@ void Ball::Draw(glm::mat4 view, glm::mat4 projection)
 	glBindVertexArray(sub_ball_guideline.vao);
 
 	glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(MeshTR));
-	glUniform4f(vColorLocation, sub_ball.GetColor().x, sub_ball.GetColor().y, sub_ball.GetColor().z, 1.0f);
+	glUniform3f(vColorLocation, sub_ball.GetColor().x, sub_ball.GetColor().y, sub_ball.GetColor().z);
 	glPointSize(1.5);
 	glDrawArrays(GL_POINTS, 0, sub_ball_guideline.GetVertexNum());
 }

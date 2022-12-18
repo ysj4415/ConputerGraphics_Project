@@ -37,6 +37,7 @@ int main(int argc, char** argv)		//---윈도우 출력, 콜백함수 설정
 	InitShader();
 	gameworld.DataRead("ObjectData.data");
 	gameworld.InitBuffer();
+	gameworld.light.Setting();
 
 	glEnable(GL_DEPTH_TEST);
 

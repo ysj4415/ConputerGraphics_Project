@@ -4,6 +4,7 @@
 #include "Projection.h"
 #include "Ball.h"
 #include "Tile.h"
+#include "Light.h"
 
 class GameWorld
 {
@@ -12,6 +13,7 @@ private:
 public:
 	Camera camera;
 	Projection_pres projection;
+	Light light;
 	Ball* ball;
 	Tile* tile;
 	Actor* object_buf;

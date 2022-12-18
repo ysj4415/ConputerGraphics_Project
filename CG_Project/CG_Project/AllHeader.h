@@ -1,3 +1,5 @@
+#pragma once
+
 #include <iostream>
 #include <cmath>
 
@@ -8,6 +10,8 @@
 #include <gl/glm/ext.hpp>
 #include <gl/glm/gtc/matrix_transform.hpp>
 
+#pragma warning(disable: 4244)
+#pragma warning(disable: 4305)
 #pragma warning(disable: 6011)
 #pragma warning(disable: 6031)
 #pragma warning(disable: 6385)

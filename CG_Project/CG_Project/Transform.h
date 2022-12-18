@@ -22,6 +22,8 @@ public:
 	void SetTrans(GLfloat x, GLfloat y, GLfloat z);
 	void SetRotate(GLfloat x, GLfloat y, GLfloat z);
 	void SetScale(GLfloat x, GLfloat y, GLfloat z);
+	glm::vec3 GetTrans();
+	glm::vec3 GetScale();
 
 	void Add_Trans(GLfloat x, GLfloat y, GLfloat z);
 	void Add_Rotate(GLfloat x, GLfloat y, GLfloat z);

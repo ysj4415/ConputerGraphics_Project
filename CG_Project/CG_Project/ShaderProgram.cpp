@@ -9,6 +9,7 @@ GLuint vertexshader, fragmentshader;		//---세이더 객체
 //---쉐이더 프로그램
 GLuint s_program;
 
+
 void make_vertexShader()
 {
 	vertexsource = filetobuf("vertex.glsl");

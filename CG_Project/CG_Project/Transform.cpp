@@ -34,3 +34,11 @@ glm::mat4 Transform::GetMat()
 
 	return TR;
 }
+glm::vec3 Transform::GetTrans()
+{
+	return translate;
+}
+glm::vec3 Transform::GetScale()
+{
+	return scale;
+}

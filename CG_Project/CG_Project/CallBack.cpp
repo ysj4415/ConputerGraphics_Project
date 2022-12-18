@@ -2,17 +2,15 @@
 #include "Mesh.h"
 #include "GameWorld.h"
 #include "WindowState.h"
-#include "Object.h"
-
+#include "ShaderProgram.h"
 
 GLvoid drawScene()
 {
-
 	//---배경 초기화
 	glClearColor(0.0f, 0.0f, 0.0f, 1.0f);
 	glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
-	//cube.Draw(camera.GetMat(), projection.GetMat());
+	gameworld.Draw();
 	glutSwapBuffers();
 }
 
@@ -22,6 +20,9 @@ GLvoid Keyboard(unsigned char key, int x, int y)
 	{
 	case 'q':
 		glutDestroyWindow(windowID);
+		break;
+	case ' ':
+		gameworld.CheckInTile();
 		break;
 	}
 
@@ -37,8 +38,14 @@ GLvoid TimerFunction(int value)
 {
 	if (value == 0)
 	{
+		gameworld.Update();
 		glutTimerFunc(10, TimerFunction, 0);
 	}
 
 	glutPostRedisplay();
+}
+
+GLvoid SpecialKeyboard(int key, int x, int y)
+{
+
 }

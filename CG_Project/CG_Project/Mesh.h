@@ -39,3 +39,37 @@ public:
 
 	void Draw(glm::mat4 view, glm::mat4 projection);
 };
+
+class Line
+{
+private:
+	int vertexNum;
+
+	glm::vec3 color;
+public:
+	Transform transform;
+	GLuint vao;
+	GLuint vbo;
+public:
+	Line();
+	~Line();
+	void InitBuffer(int pointspot, GLfloat radius);
+	void SetColor(GLfloat r, GLfloat g, GLfloat b);
+	glm::vec3 GetColor();
+	int GetVertexNum();
+};
+
+class Actor
+{
+public:
+	Mesh mesh;
+	Transform transform;
+
+	Actor* nextobject;
+public:
+	Actor();
+	virtual ~Actor();
+	virtual void Draw(glm::mat4 view, glm::mat4 projection);
+	virtual void InitBuffer();
+	virtual void Update();
+};

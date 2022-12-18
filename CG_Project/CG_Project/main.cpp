@@ -4,13 +4,10 @@
 #include <gl/glm/ext.hpp>
 #include <gl/glm/gtc/matrix_transform.hpp>
 #include "Mesh.h"
-#include "Object.h"
 #include "ShaderProgram.h"
 #include "CallBack.h"
 #include "WindowState.h"
 #include "GameWorld.h"
-
-#include "Object.h"
 
 using namespace std;
 
@@ -41,15 +38,16 @@ int main(int argc, char** argv)		//---윈도우 출력, 콜백함수 설정
 		std::cout << "GLEW initialized\n";
 
 	InitShader();
+	gameworld.DataRead("ObjectData.data");
+	gameworld.InitBuffer();
 
-	cube.InitBuffer("orb.obj");
-	cube.SetColor(1.0, 0.0, 0.0);
 	glEnable(GL_DEPTH_TEST);
 
-
+	glutTimerFunc(10, TimerFunction, 0);
 	glutDisplayFunc(drawScene);
 	glutReshapeFunc(Reshape);
 	glutKeyboardFunc(Keyboard);
+	glutSpecialFunc(SpecialKeyboard);
 
 	glutMainLoop();
 }

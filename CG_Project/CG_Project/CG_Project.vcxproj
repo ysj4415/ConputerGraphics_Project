@@ -129,7 +129,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="Object.h" />
+    <ClInclude Include="Ball.h" />
     <ClInclude Include="CallBack.h" />
     <ClInclude Include="Camera.h" />
     <ClInclude Include="GameWorld.h" />
@@ -141,11 +141,13 @@
     </ClInclude>
     <ClInclude Include="Projection.h" />
     <ClInclude Include="ShaderProgram.h" />
+    <ClInclude Include="Tile.h" />
     <ClInclude Include="Transform.h" />
+    <ClInclude Include="UserDefinedFunction.h" />
     <ClInclude Include="WindowState.h" />
-    <ClInclude Include="Object.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Ball.cpp" />
     <ClCompile Include="CallBack.cpp" />
     <ClCompile Include="Camera.cpp" />
     <ClCompile Include="GameWorld.cpp" />
@@ -160,7 +162,9 @@
     <ClCompile Include="objread.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ExcludedFromBuild>
     </ClCompile>
+    <ClCompile Include="Tile.cpp" />
     <ClCompile Include="Transform.cpp" />
+    <ClCompile Include="UserDefinedFunction.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

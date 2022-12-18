@@ -22,7 +22,10 @@ public:
 public:
 	Camera();
 	Camera(glm::vec3 CPos, glm::vec3 CDir, glm::vec3 CUp);
+	void SetCamera(glm::vec3 CPos, glm::vec3 CDir, glm::vec3 CUp);
 	~Camera();
 
 	glm::mat4 GetMat();
+	void CameraMoving(GLfloat x, GLfloat y, GLfloat z);		//카메라가 공의 위치를 따라가게
+	void TransUpdate();			//카메라 변환 반영
 };

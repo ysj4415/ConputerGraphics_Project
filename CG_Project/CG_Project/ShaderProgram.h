@@ -14,6 +14,7 @@ extern GLuint vertexshader, fragmentshader;		//---세이더 객체
 //---쉐이더 프로그램
 extern GLuint s_program;
 
+
 void make_vertexShader();
 void make_fragmentShader();
 void InitShader();

@@ -6,9 +6,10 @@
 #include <gl/glm/glm.hpp>
 #include <gl/glm/ext.hpp>
 #include <gl/glm/gtc/matrix_transform.hpp>
-
-GLvoid drawScene(GLvoid);
-GLvoid Reshape(int w, int h);
-GLvoid Keyboard(unsigned char key, int x, int y);
-GLvoid TimerFunction(int value);
-GLvoid SpecialKeyboard(int key, int x, int y);
+#include <cmath>
+//
+//GLfloat* CreateCircle(int point_num)
+//{
+//	GLfloat* circle = new GLfloat(point_num * 3);
+//
+//}

@@ -133,6 +133,7 @@
     <ClInclude Include="CallBack.h" />
     <ClInclude Include="Camera.h" />
     <ClInclude Include="GameWorld.h" />
+    <ClInclude Include="Light.h" />
     <ClInclude Include="Mesh.h">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ExcludedFromBuild>
     </ClInclude>
@@ -147,10 +148,12 @@
     <ClInclude Include="WindowState.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="AllHeader.h" />
     <ClCompile Include="Ball.cpp" />
     <ClCompile Include="CallBack.cpp" />
     <ClCompile Include="Camera.cpp" />
     <ClCompile Include="GameWorld.cpp" />
+    <ClCompile Include="Light.cpp" />
     <ClCompile Include="main.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ExcludedFromBuild>
     </ClCompile>

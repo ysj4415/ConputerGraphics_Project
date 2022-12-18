@@ -1,8 +1,5 @@
 ﻿#define _CRT_SECURE_NO_WARNINGS
-#include <iostream>
-#include <gl/glm/glm.hpp>
-#include <gl/glm/ext.hpp>
-#include <gl/glm/gtc/matrix_transform.hpp>
+#include "AllHeader.h"
 #include "Mesh.h"
 #include "ShaderProgram.h"
 #include "CallBack.h"

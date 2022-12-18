@@ -1,6 +1,8 @@
 #include "UserDefinedFunction.h"
 #define PI 3.141592
 
+#pragma warning (disable: 4244)
+
 GLfloat* MakeCircle(int pointnum, GLfloat radius)
 {
 	GLfloat* circle_vertex = new GLfloat[pointnum * 3];

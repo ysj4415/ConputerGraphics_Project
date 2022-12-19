@@ -15,7 +15,7 @@ in vec3 Normal;
 void main(void)
 {
 	// 주변 조명
-	float ambientLight = 0.3;
+	float ambientLight = 0.7;
 	vec3 ambient = ambientLight * lightColor;
 
 	// 산란 반사 조명

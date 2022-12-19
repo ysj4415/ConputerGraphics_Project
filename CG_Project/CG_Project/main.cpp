@@ -35,9 +35,10 @@ int main(int argc, char** argv)		//---윈도우 출력, 콜백함수 설정
 		std::cout << "GLEW initialized\n";
 
 	InitShader();
-	gameworld.DataRead("ObjectData.data");
-	gameworld.InitBuffer();
-	gameworld.light.Setting();
+	cur_state = mainstate;
+	cur_state->DataRead();
+	cur_state->InitBuffer();
+	cur_state->light.Setting();
 
 	glEnable(GL_DEPTH_TEST);
 
@@ -46,6 +47,7 @@ int main(int argc, char** argv)		//---윈도우 출력, 콜백함수 설정
 	glutReshapeFunc(Reshape);
 	glutKeyboardFunc(Keyboard);
 	glutSpecialFunc(SpecialKeyboard);
+	glutMouseFunc(Mouse);
 
 	glutMainLoop();
 }

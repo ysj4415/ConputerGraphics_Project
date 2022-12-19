@@ -1,6 +1,6 @@
 #include "Ball.h"
 #include "ShaderProgram.h"
-
+#include "GameWorld.h"
 Ball::Ball() :Actor()
 {
 	speed = -3.0f;
@@ -108,6 +108,7 @@ void Ball::ChangeBalls(GLfloat x, GLfloat z)
 	life = 0;
 
 	tilecount++;
+	std::cout << tilecount << std::endl;
 }
 void Ball::InitBuffer()
 {
@@ -119,33 +120,50 @@ void Ball::InitBuffer()
 
 void Ball::Update()
 {
-	transform.Add_Rotate(0.0, speed, 0.0);
-	life += speed * -1;
-
-
-	//---게임 오버 체크
-	if (life >= 360)
+	if (starttimer < 100)
 	{
-		if (sub_ball.transform.GetTrans().x < 0.0)
-			sub_ball.transform.Add_Trans(0.03, 0.0, 0.0);
-		else
-			sub_ball.transform.SetScale(0.0, 0.0, 0.0);
+		starttimer++;
 	}
 	else
 	{
-		//---가이드라인 위치 설정
-		main_ball_guideline.transform.SetTrans(transform.GetTrans().x, transform.GetTrans().y, transform.GetTrans().z);
-		glm::vec4 SubBallLoc = GetSubBallLoc();
-		sub_ball_guideline.transform.SetTrans(SubBallLoc.x, SubBallLoc.y, SubBallLoc.z);
+		transform.Add_Rotate(0.0, speed, 0.0);
+		life += speed * -1;
 
-		//---가이드라인 크기 설정
-		if (main_ball_guideline.transform.GetScale().x < 1.0)
+
+		//---게임 오버 체크
+		if (life >= 360)
 		{
-			main_ball_guideline.transform.Add_Scale(0.1, 0.1, 0.1);
+			if (sub_ball.transform.GetTrans().x < 0.0)
+				sub_ball.transform.Add_Trans(0.03, 0.0, 0.0);
+			else
+				sub_ball.transform.SetScale(0.0, 0.0, 0.0);
+
+			if (endtimer > 100)
+			{
+				MainState* mainstate = new MainState;
+				cur_state->next_state = mainstate;
+			}
+			else
+			{
+				endtimer++;
+			}
 		}
-		if (sub_ball_guideline.transform.GetScale().y > 0.0)
+		else
 		{
-			sub_ball_guideline.transform.Add_Scale(-0.1, -0.1, -0.1);
+			//---가이드라인 위치 설정
+			main_ball_guideline.transform.SetTrans(transform.GetTrans().x, transform.GetTrans().y, transform.GetTrans().z);
+			glm::vec4 SubBallLoc = GetSubBallLoc();
+			sub_ball_guideline.transform.SetTrans(SubBallLoc.x, SubBallLoc.y, SubBallLoc.z);
+
+			//---가이드라인 크기 설정
+			if (main_ball_guideline.transform.GetScale().x < 1.0)
+			{
+				main_ball_guideline.transform.Add_Scale(0.1, 0.1, 0.1);
+			}
+			if (sub_ball_guideline.transform.GetScale().y > 0.0)
+			{
+				sub_ball_guideline.transform.Add_Scale(-0.1, -0.1, -0.1);
+			}
 		}
 	}
 }

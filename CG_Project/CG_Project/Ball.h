@@ -7,6 +7,8 @@
 class Ball : public Actor
 {
 private:
+	int starttimer = 0;
+	int endtimer = 0;
 	GLfloat speed;
 	GLfloat life;
 public:

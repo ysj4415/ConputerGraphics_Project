@@ -1,8 +1,14 @@
 #include "Tile.h"
 
-Tile::Tile(GLfloat x, GLfloat y, GLfloat z)
+Tile::Tile(GLfloat x, GLfloat y, GLfloat z, int t)
 {
-	mesh.SetColor(0.7, 0.7, 0.7);
+	type = t;
+	if(t == 0)
+		mesh.SetColor(0.7, 0.7, 0.7);
+	else if (t == 1)
+		mesh.SetColor(0.7, 0.0, 0.0);
+	else if (t == 2)
+		mesh.SetColor(0.0, 0.0, 7.0);
 	transform.SetScale(0.8, 0.2, 0.8);
 	transform.SetTrans(x, y, z);
 }

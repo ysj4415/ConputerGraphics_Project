@@ -27,5 +27,8 @@ public:
 	void InitBuffer();
 
 	void Update();
+	void SpeedUp();
+	void SpeedDown();
+
 };
 

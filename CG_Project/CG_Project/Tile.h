@@ -6,9 +6,10 @@
 class Tile : public Actor
 {
 public:
+	int type;
 	Tile* nexttile = NULL;
 public:
-	Tile(GLfloat x, GLfloat y, GLfloat z);
+	Tile(GLfloat x, GLfloat y, GLfloat z, int t);
 	~Tile();
 	void InitBuffer();
 

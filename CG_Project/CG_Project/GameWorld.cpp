@@ -104,6 +104,14 @@ void GameWorld::CheckInTile()
 		}
 		buf->mesh.SetColor(1.0, 1.0, 1.0);
 		ball->ChangeBalls(buf->transform.GetTrans().x, buf->transform.GetTrans().z);
+		if (buf->type == 1)
+		{
+			ball->SpeedUp();
+		}
+		else if (buf->type == 2)
+		{
+			ball->SpeedDown();
+		}
 	}
 	std::cout << tilenum << std::endl;
 	if (ball->tilecount + 1 == tilenum)
@@ -151,16 +159,16 @@ void GameWorld::DataRead()
 	}
 	//--- 2. 메모리 할당
 	glm::vec3 tiledata = glm::vec3(0.0, 0.0, 0.0);
-
+	int tiletype = 0;
 	rewind(dataFile);
 
 	//--- 3. 할당된 메모리에 각 버텍스, 페이스 정보 입력
 	while (!feof(dataFile)) {
 		fscanf(dataFile, "%s", count);
 		if (count[0] == 't' && count[1] == '\0') {
-			fscanf(dataFile, "%f %f %f",
-				&tiledata.x, &tiledata.y, &tiledata.z);
-			Tile* temp = new Tile(tiledata.x, tiledata.y, tiledata.z);
+			fscanf(dataFile, "%f %f %f %d",
+				&tiledata.x, &tiledata.y, &tiledata.z, &tiletype);
+			Tile* temp = new Tile(tiledata.x, tiledata.y, tiledata.z, tiletype);
 			Tile* buf = tile;
 			if (buf == NULL) //buf가 비어있으면 buf에 삽입
 			{
@@ -391,6 +399,14 @@ void GameWorld2::CheckInTile()
 		}
 		buf->mesh.SetColor(1.0, 1.0, 1.0);
 		ball->ChangeBalls(buf->transform.GetTrans().x, buf->transform.GetTrans().z);
+		if (buf->type == 1)
+		{
+			ball->SpeedUp();
+		}
+		else if (buf->type == 2)
+		{
+			ball->SpeedDown();
+		}
 	}
 	std::cout << tilenum << std::endl;
 	if (ball->tilecount + 1 == tilenum)
@@ -438,16 +454,16 @@ void GameWorld2::DataRead()
 	}
 	//--- 2. 메모리 할당
 	glm::vec3 tiledata = glm::vec3(0.0, 0.0, 0.0);
-
+	int tiletype = 0;
 	rewind(dataFile);
 
 	//--- 3. 할당된 메모리에 각 버텍스, 페이스 정보 입력
 	while (!feof(dataFile)) {
 		fscanf(dataFile, "%s", count);
 		if (count[0] == 't' && count[1] == '\0') {
-			fscanf(dataFile, "%f %f %f",
-				&tiledata.x, &tiledata.y, &tiledata.z);
-			Tile* temp = new Tile(tiledata.x, tiledata.y, tiledata.z);
+			fscanf(dataFile, "%f %f %f %d",
+				&tiledata.x, &tiledata.y, &tiledata.z, &tiletype);
+			Tile* temp = new Tile(tiledata.x, tiledata.y, tiledata.z, tiletype);
 			Tile* buf = tile;
 			if (buf == NULL) //buf가 비어있으면 buf에 삽입
 			{

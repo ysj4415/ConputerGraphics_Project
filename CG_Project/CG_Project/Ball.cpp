@@ -167,3 +167,12 @@ void Ball::Update()
 		}
 	}
 }
+
+void Ball::SpeedUp()
+{
+	speed += -1.0;
+}
+void Ball::SpeedDown()
+{
+	speed += 1.0;
+}
